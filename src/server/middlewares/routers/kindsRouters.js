@@ -1,5 +1,6 @@
 const express = require("express");
-cont Kinds  =
+const { getAllKinds } = require("../../controllers/kindsControllers");
+
 const kindsRouter = express.Router();
 
 kindsRouter.get("/", getAllKinds);
