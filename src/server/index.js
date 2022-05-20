@@ -3,6 +3,7 @@ const debug = require("debug")("kinds:server");
 const chalk = require("chalk");
 const express = require("express");
 const helmet = require("helmet");
+
 const morgan = require("morgan");
 const { notFoundError, generalError } = require("./middlewares/errors");
 
@@ -22,6 +23,8 @@ const startServer = (port) =>
 
 app.use(morgan("dev"));
 app.use(helmet());
+
+app.use("/listKinds", kindsRouters);
 
 app.use(notFoundError);
 app.use(generalError);

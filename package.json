@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src",
     "start-dev": "nodemon src -q",
-    "test": "jest --watchAll",
+    "test": "jest --watchAll=false",
     "test-coverage": "jest --watchAll --coverage"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "helmet": "^5.0.2",
     "jest": "^27.5.1",
     "mongoose": "^6.2.2",
+    "mongoose-type-url": "^2.1.0",
     "morgan": "^1.10.0"
   },
   "jest": {
